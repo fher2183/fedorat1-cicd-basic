@@ -1,0 +1,15 @@
+name: Basic CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Say hello
+        run: echo "CI/CD pipeline is working!"
